@@ -1,0 +1,16 @@
+{% load bootstrap_tags %}
+<form class="form-horizontal" action="/quote" method="POST">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4>Request a Quote</h4>
+    </div>
+    <div class="modal-body">
+        <p>Request quote text</p>
+        {{ form|as_bootstrap }}
+    </div>
+    <div class="modal-footer">
+        <p>Please note: fields marked with an asterisk are required.</p>
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

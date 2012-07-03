@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" type="text/css" media="screen" title="css" charset="utf-8">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/devmiles.css" type="text/css" media="screen" title="css" charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+    {% block extra_head_base %}
+        {% block extra_head %}{% endblock %}
+    {% endblock %}
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50" id="home">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#"><span class="dmlogo">&gt;</span>devmiles</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+        <div class="modal hide fade" id="modal-request">
+            {% include "requestquoteform.html" %}
+        </div>
+		<header class="jumbotron masthead">
+			<div class="inner">
+				<h1><span class="dmlogo">&gt;</span>devmiles</h1>
+				<p>Software done right. Making people successful in a changing world.</p>
+				<p>
+					<a href="contact" class="btn btn-large">Contact Us</a>
+					<a href="#modal-request" data-toggle="modal" class="btn btn-primary btn-large">Request a Quote</a>
+				</p>
+			</div>
+			<div class="subnav">
+				<ul class="nav nav-pills">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li class="pull-right" id="quote-link"><a href="#modal-request" data-toggle="modal">Request a Quote</a></li>
+				</ul>
+			</div>
+		</header>
+		<section id="services">
+			<div class="marketing">
+				<h1>Software done right. Making people successful in a changing world.</h1>
+				<p class="marketing-byline">Creating greater business value</p>
+				<p><span class="dmlogo">&gt;</span>devmiles' goal is to design and develop software solutions to provide greater business value for your organization. We focus on your business needs and choose modern and powerful technologies that fit your specific project. We use agile approach to adapt rapidly and cost efficiently in response to changes in business environments.</p>
+				<div class="row">
+					<div class="span4">
+						<h2>Custom software development</h2>
+						<p>Whether you are not satisfied with your current solution or just want custom software to suit your specific needs, we're here to help. We believe that every company can benefit from software designed to model its unique business model. Sometimes it takes a minor tweak to an existing open source solution and sometimes it's a highly robust and scalable custom system. <span class="dmlogo">&gt;</span>devmiles will help you choose what's best and will implement it timely and on budget.</p>
+					</div>
+					<div class="span4">
+						<h2>Web development &amp; design</h2>
+						<p>Be it a small almost static website, a feature-rich enterprise portal or a cutting-edge WebSockets in-browser application...</p>
+					</div>
+					<div class="span4">
+						<h2>Enterprise solutions</h2>
+						<p>Enterprise software requirements almost universally include performance, scalability and robustness. All <span class="dmlogo">&gt;</span>devmiles developers have at least 5 years of dedicated enterprise experience building complex systems for large organizations.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span4">
+						<h2>Software development consulting</h2>
+						<p>We provide software development consulting services to help you deliver high quality projects within budget and on time. <span class="dmlogo">&gt;</span>devmiles shares expert knowledge of software world to help choose right tools for the job - technologies, open source solutions, best practices - all to increase your project predictability, team productivity and product quality.</p>
+					</div>
+					<div class="span4">
+						<h2>Android development</h2>
+						<p>We offer Android development services since early 2011. Android is considered to be one of the most flexible mobile and tablet platforms gaining leading positions as a native OS for various devices. <span class="dmlogo">&gt;</span>devmiles has skills to offer custom applications development using both Java and HTML5 + CSS3 approaches.</p>
+					</div>
+					<div class="span4">
+						<h2>Business intelligence solutions</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="portfolio">
+			<div class="marketing">
+				<h1>Featured works</h1>
+				<p class="marketing-byline"></p>
+				<p>It's a common belief in the software world that some technologies or platforms are better than the other. We are sure you've heard statements that Java is better than .NET or Ruby is better than Python. Misled by those convictions people choose technologies before they even entirely understand the problems they need to solve. At devmiles we put business requirements first and select technologies that fit best. We make sure that software produced at devmiles is on par with the highest industry standards. Our approach resulted in a number of successful products we are proud of!</p>
+				<div class="row">
+					<div class="span6">
+						<h2>Real estate platform with RETS integration</h2>
+						<p>Real Estate platform with RETS integration</p>
+					</div>
+					<div class="span6">
+						<h2>DBGallery Desktop enterprise features</h2>
+						<p>We have joined DBGallery development and added a number of enterprise features - multi-user support, permissions and a web application to manage this all. A fully featured web version of DBGallery is on the way too!</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<h2>Enterprise messaging solution</h2>
+					</div>
+					<div class="span6">
+						<h2>DBGallery marketing website</h2>
+						<p>A shared photo database, DBGallery is an amazing tool to keep your digital photo assets organized. It appeals for individual photographers with large collections as well as organizations with different staff members accessing and managing data.
+						We have quickly come up with a marketing web site solution for DBGallery including Google Analytics support and Salesforce lead analysis tools.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<ul class="thumbnails">
+						  <li class="span3">
+						    <a href="#" class="thumbnail">
+						      <img src="http://placehold.it/260x180" alt="">
+						    </a>
+						  </li>
+						</ul>
+						<h2>Oceans technology community portal</h2>
+						<p>A shared photo database, DBGallery is an amazing tool to keep your digital photo assets organized. It appeals for individual photographers with large collections as well as organizations with different staff members accessing and managing data.
+						We have quickly come up with a marketing web site solution for DBGallery including Google Analytics support and Salesforce lead analysis tools.	A shared photo database, DBGallery is an amazing tool to keep your digital photo assets organized. It appeals for individual photographers with large collections as well as organizations with different staff members accessing and managing data.</p>
+					</div>
+					<div class="span6">
+						<h2>NAV dissemination system</h2>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/devmiles.js"></script>
+</body>
+</html>

@@ -173,6 +173,7 @@ INSTALLED_APPS = [
     # project
     "about",
     "profiles",
+    "devmiles",
 ]
 
 FIXTURE_DIRS = [
@@ -182,6 +183,9 @@ FIXTURE_DIRS = [
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 EMAIL_BACKEND = "mailer.backend.DbBackend"
+DEFAULT_FROM_EMAIL = "zgollum@gmail.com"
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 25
 
 ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda o: "/profiles/profile/%s/" % o.username,
