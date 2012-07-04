@@ -42,14 +42,14 @@ section {
 	color: #fff;
 }
 #quote-link, #quote-link.active a {
-	background-color: #0074cc;
+	background-color: #c04;
 }
 #quote-link:hover {
-	background-color: #0074cc;
+	background-color: #c04;
 }
 #quote-link a:hover {
 	color: #fff;
-	background-color: #05c;
+	background-color: #80002a;
 }
 /* Jumbotron */
 .jumbotron {
