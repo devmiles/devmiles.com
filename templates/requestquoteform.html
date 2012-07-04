@@ -5,12 +5,14 @@
         <h4>Request a Quote</h4>
     </div>
     <div class="modal-body">
-        <p>Request quote text</p>
-        {{ form|as_bootstrap }}
+        <p>Pleasee provide us with your contact and project information by filling out the form below. We will respond to your request with our estimates for the project.</p>
+        <div class="form-body">
+            {{ form|as_bootstrap }}
+        </div>
     </div>
     <div class="modal-footer">
         <p>Please note: fields marked with an asterisk are required.</p>
-        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a href="#" id="modal-close" class="btn" data-dismiss="modal">Close</a>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>

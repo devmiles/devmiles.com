@@ -38,7 +38,16 @@ var submitquote = function()
             $("#modal-request").html(data.html)
             $(":submit").click(submitquote)
         } else if (data.status == 'ok') {
-            $("#modal-request").html(data.html)
+            $(".modal-body").prepend('<div class="alert alert-success">Thanks! We\'ll contact you soon.</div>')
+            $(".form-body, :submit, .modal-footer p, .modal-body p").slideUp('fast', function() {
+                window.setTimeout(function() {
+                    $("#modal-close").click()
+                    window.setTimeout(function() {
+                        $("#modal-request").html(data.html)
+                        $(":submit").click(submitquote)
+                    }, 1500)
+                }, 2000)
+            })
         }
     });
     return false
