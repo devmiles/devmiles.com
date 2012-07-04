@@ -1,10 +1,12 @@
 body {
 	padding-top: 90px;
 	position: relative;
-	/*font-family: 'Ubuntu', sans-serif;*/
+	font-family: Arial, sans-serif;
 	font-size: 15px;
+    background-image: url(../img/devmilesbck.gif);
+    background-position: 0 40px;
 }
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, .nav li a
 {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -17,11 +19,16 @@ section {
 .modal-body {
     max-height: 420px;
 }
-/*.brand {
-    margin-left: -150px;
-}*/
+.brand {
+    background-image: url(../img/dmlogo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 121px;
+    height: 23px;
+}
 .dmlogo {
-	color: #c03;
+	color: #c04;
 	font-weight: bold;
 }
 /* Request a quote */
@@ -50,8 +57,8 @@ section {
 }
 .jumbotron h1 {
 	margin-bottom: 9px;
-	font-size: 81px;
-	font-weight: bold;
+	font-size: 60px;
+	font-weight: 500;
 	letter-spacing: -1px;
 	line-height: 1;
 }
@@ -64,8 +71,10 @@ section {
 .masthead p {
 	margin-left: 5%;
 	margin-right: 5%;
-	font-size: 30px;
-	line-height: 36px;
+	font-size: 48px;
+    font-weight: 300;
+	line-height: 60px;
+    font-family: 'Ubuntu', sans-serif;
 }
 .jumbotron .btn-large {
 	font-size: 20px;
@@ -76,10 +85,13 @@ section {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 }
+.masthead .inner {
+    margin-bottom: 40px;
+}
 .marketing h1 {
-	margin: 36px 0 27px;
-	font-size: 40px;
-	font-weight: 300;
+	margin: 36px 0 16px;
+	font-size: 42px;
+	font-weight: 500;
 	text-align: center;
 }
 .marketing-byline {
@@ -95,6 +107,8 @@ section {
 }
 .marketing h2 {
 	font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 7px;
 }
 .marketing h2, .marketing h3 {
 	font-weight: 300;
@@ -104,6 +118,7 @@ div.marketing {
 }
 /* Subnav */
 .subnav {
+  /*margin-top: 40px;*/
   width: 100%;
   height: 36px;
   background-color: #eeeeee; /* Old browsers */
