@@ -1,8 +1,8 @@
 body {
 	padding-top: 90px;
 	position: relative;
-	/*font-family: 'Ubuntu', sans-serif;
-	font-size: 15px;*/
+	/*font-family: 'Ubuntu', sans-serif;*/
+	font-size: 15px;
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -11,11 +11,14 @@ h1, h2, h3, h4, h5, h6
 section {
 	padding-top: 60px;
 }
+.modal {
+    margin-top: -280px;
+}
 .modal-body {
-    max-height: 500px;
+    max-height: 420px;
 }
 .dmlogo {
-	color: #e05;
+	color: #c03;
 	font-weight: bold;
 }
 /* Request a quote */

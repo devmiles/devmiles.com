@@ -21,7 +21,7 @@ INTERNAL_IPS = [
 ]
 
 ADMINS = [
-    # ("Your Name", "your_email@domain.com"),
+    ("Vladimir Volodin", "vlad@devmiles.com"),
 ]
 
 MANAGERS = ADMINS
@@ -182,7 +182,8 @@ FIXTURE_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-EMAIL_BACKEND = "mailer.backend.DbBackend"
+#EMAIL_BACKEND = "mailer.backend.DbBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEFAULT_FROM_EMAIL = "zgollum@gmail.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = 25
