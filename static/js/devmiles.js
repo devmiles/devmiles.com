@@ -6,6 +6,7 @@ $(document).ready(function () {
 	  , $nav = $('.subnav')
 	  , navTop = $('.subnav').length && $('.subnav').offset().top - 40
 	  , isFixed = 0
+            //, brand_margin = -150
 
 	processScroll()
 
@@ -17,6 +18,12 @@ $(document).ready(function () {
 
 	function processScroll() {
 	  var i, scrollTop = $win.scrollTop()
+      /*var new_margin = brand_margin + scrollTop
+      if (new_margin > 0) {
+          new_margin = 0
+      }
+      console.log(new_margin)
+      $(".brand").css("margin-left", new_margin)*/
 	  if (scrollTop >= navTop && !isFixed) {
 	    isFixed = 1
 	    $nav.addClass('subnav-fixed')
@@ -38,7 +45,16 @@ var submitquote = function()
             $("#modal-request").html(data.html)
             $(":submit").click(submitquote)
         } else if (data.status == 'ok') {
-            $("#modal-request").html(data.html)
+            $(".modal-body").prepend('<div class="alert alert-success">Thanks! We\'ll contact you soon.</div>')
+            $(".form-body, :submit, .modal-footer p, .modal-body p").slideUp('fast', function() {
+                window.setTimeout(function() {
+                    $("#modal-close").click()
+                    window.setTimeout(function() {
+                        $("#modal-request").html(data.html)
+                        $(":submit").click(submitquote)
+                    }, 1500)
+                }, 2000)
+            })
         }
     });
     return false

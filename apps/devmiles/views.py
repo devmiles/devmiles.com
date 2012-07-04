@@ -24,6 +24,7 @@ def quote(request):
         recipients = User.objects.filter(is_staff=True).values_list('email', flat=True)
         send_mail('Quote requested', new_quote_request.message, 'zgollum@gmail.com', recipients, False)
         #mail_admins('Quote requested', new_quote_request.message)
+        form = RequestQuoteForm()
         context = {'form': form}
         context.update(csrf(request))
         rendered = render_to_string('requestquoteform.html', context)

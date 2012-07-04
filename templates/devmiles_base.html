@@ -5,16 +5,17 @@
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" type="text/css" media="screen" title="css" charset="utf-8">
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/devmiles.css" type="text/css" media="screen" title="css" charset="utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
     {% block extra_head_base %}
         {% block extra_head %}{% endblock %}
     {% endblock %}
+    <title>devmiles - software done right</title>
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50" id="home">
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="#"><span class="dmlogo">&gt;</span>devmiles</a>
+				<a class="brand" href="#"></a>
 			</div>
 		</div>
 	</div>
@@ -24,8 +25,8 @@
         </div>
 		<header class="jumbotron masthead">
 			<div class="inner">
-				<h1><span class="dmlogo">&gt;</span>devmiles</h1>
-				<p>Software done right. Making people successful in a changing world.</p>
+				<h1>Software done right.</h1>
+				<p>Making people successful<br /> in a changing world.</p>
 				<p>
 					<a href="contact" class="btn btn-large">Contact Us</a>
 					<a href="#modal-request" data-toggle="modal" class="btn btn-primary btn-large">Request a Quote</a>
@@ -43,9 +44,9 @@
 		</header>
 		<section id="services">
 			<div class="marketing">
-				<h1>Software done right. Making people successful in a changing world.</h1>
-				<p class="marketing-byline">Creating greater business value</p>
-				<p><span class="dmlogo">&gt;</span>devmiles' is a small, independent full-service software development company located in Kyiv, Ukraine.
+                <h1>Creating greater business value</h1>
+                {# <p class="marketing-byline">Creating greater business value</p> #}
+                <p><span class="dmlogo">&gt;</span>devmiles' is a small, independent full-service software development company located in Kyiv, Ukraine.
                     Our goal is to design and develop software solutions to provide greater business value for your organization.
                     We focus on your business needs and choose modern and powerful technologies that fit your specific project.
                     We use agile approach to adapt rapidly and cost efficiently in response to changes in business environments. We involve all of our clients from start to finish so they are just as proud of their software as we are.  </p>
