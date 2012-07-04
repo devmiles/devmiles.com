@@ -6,6 +6,7 @@ $(document).ready(function () {
 	  , $nav = $('.subnav')
 	  , navTop = $('.subnav').length && $('.subnav').offset().top - 40
 	  , isFixed = 0
+            //, brand_margin = -150
 
 	processScroll()
 
@@ -17,6 +18,12 @@ $(document).ready(function () {
 
 	function processScroll() {
 	  var i, scrollTop = $win.scrollTop()
+      /*var new_margin = brand_margin + scrollTop
+      if (new_margin > 0) {
+          new_margin = 0
+      }
+      console.log(new_margin)
+      $(".brand").css("margin-left", new_margin)*/
 	  if (scrollTop >= navTop && !isFixed) {
 	    isFixed = 1
 	    $nav.addClass('subnav-fixed')

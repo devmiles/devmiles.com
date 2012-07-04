@@ -17,6 +17,9 @@ section {
 .modal-body {
     max-height: 420px;
 }
+/*.brand {
+    margin-left: -150px;
+}*/
 .dmlogo {
 	color: #c03;
 	font-weight: bold;
@@ -31,7 +34,7 @@ section {
 #quote-link a {
 	color: #fff;
 }
-#quote-link {
+#quote-link, #quote-link.active a {
 	background-color: #0074cc;
 }
 #quote-link:hover {
