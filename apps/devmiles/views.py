@@ -22,7 +22,7 @@ def quote(request):
     if form.is_valid():
         new_quote_request = form.save()
         recipients = User.objects.filter(is_staff=True).values_list('email', flat=True)
-        send_mail('Quote requested', new_quote_request.message, 'zgollum@gmail.com', recipients, False)
+        send_mail('Quote requested', new_quote_request.message, 'info@devmiles.com', recipients, False)
         #mail_admins('Quote requested', new_quote_request.message)
         form = RequestQuoteForm()
         context = {'form': form}
