@@ -34,9 +34,11 @@ var submitquote = function()
 {
     $.post('/quote', $(".form-horizontal").serialize(), function(data) {
         console.log(data)
-        if (data.status == 'ok') {
+        if (data.status == 'error') {
             $("#modal-request").html(data.html)
             $(":submit").click(submitquote)
+        } else if (data.status == 'ok') {
+            $("#modal-request").html(data.html)
         }
     });
     return false
