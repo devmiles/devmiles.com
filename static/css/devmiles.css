@@ -11,9 +11,17 @@ h1, h2, h3, h4, h5, h6, .nav li a
 	font-family: 'Ubuntu', sans-serif;
 }
 #services h2 {
+    margin-top: 20px;
     padding-left: 56px;
     background-repeat: no-repeat;
     background-position: 4px;
+    min-height: 50px;
+}
+#services .marketing .row .span4 p {
+    background-image: url(../img/divider3px.gif);
+    background-position: top;
+    padding-top: 12px;
+    background-repeat: repeat-x;
 }
 #services-custom h2 {
     background-image: url(../img/services-custom.png);
