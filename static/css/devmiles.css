@@ -10,8 +10,36 @@ h1, h2, h3, h4, h5, h6, .nav li a
 {
 	font-family: 'Ubuntu', sans-serif;
 }
+#services h2 {
+    padding-left: 56px;
+    background-repeat: no-repeat;
+    background-position: 4px;
+}
+#services-custom h2 {
+    background-image: url(../img/services-custom.png);
+}
+#services-bi h2 {
+    background-image: url(../img/services-bi.png);
+}
+#services-android h2 {
+    background-image: url(../img/services-android.png);
+}
+#services-consult h2 {
+    background-image: url(../img/services-consult.png);
+}
+#services-ent h2 {
+    background-image: url(../img/services-ent.png);
+}
+#services-web h2 {
+    background-image: url(../img/services-web.png);
+}
 section {
 	padding-top: 60px;
+}
+.bluebox {
+    color: #fff;
+    background-image: url(../img/dmwaveblue80.png);
+    padding-top: 10px;
 }
 .modal {
     margin-top: -280px;
