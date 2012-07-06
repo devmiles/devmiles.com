@@ -1,5 +1,5 @@
 {% load bootstrap_tags %}
-<form class="form-horizontal" action="/quote" method="POST">
+<form class="form-horizontal" id="quote-form" action="/quote" method="POST">
     {% csrf_token %}
     <div class="modal-header">
         <h4>Request a Quote</h4>
@@ -13,6 +13,6 @@
     <div class="modal-footer">
         <p>Please note: fields marked with an asterisk are required.</p>
         <a href="#" id="modal-close" class="btn" data-dismiss="modal">Close</a>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="quote-submit" class="btn btn-primary">Submit</button>
     </div>
 </form>

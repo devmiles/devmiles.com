@@ -8,3 +8,11 @@ class RequestQuoteForm(ModelForm):
         widgets = {
             'message': Textarea(attrs={'cols':40, 'rows': 6})
         }
+
+class MessageForm(ModelForm):
+    class Meta:
+        model = QuoteRequest
+        exclude = ('company', 'phone')
+        widgets = {
+            'message': Textarea(attrs={'cols':40, 'rows': 6})
+        }

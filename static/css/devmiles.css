@@ -10,6 +10,16 @@ h1, h2, h3, h4, h5, h6, .nav li a
 {
 	font-family: 'Ubuntu', sans-serif;
 }
+#contacts {
+    background-color: #000;
+    color: #fff;
+}
+#contacts ul {
+    margin-top: 15px;
+}
+#contacts ul li {
+    margin: 0 0 15px 0;
+}
 #services h2 {
     margin-top: 20px;
     padding-left: 56px;
@@ -43,6 +53,10 @@ h1, h2, h3, h4, h5, h6, .nav li a
 }
 section {
 	padding-top: 60px;
+}
+.form-actions {
+    border-color: #333;
+    background-color: #000;
 }
 .bluebox {
     color: #fff;
@@ -125,13 +139,13 @@ section {
     margin-bottom: 60px;
 }
 .marketing h1 {
-	margin: 0px 0 28px;
+	margin: 0 0 28px;
 	font-size: 42px;
 	font-weight: 500;
 	text-align: center;
 }
 .marketing-byline {
-	margin: 0px 0 27px;
+	margin: 0 0 27px;
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 24px;

@@ -1,0 +1,17 @@
+{% load bootstrap_tags %}
+<form class="form-horizontal" id="message-form" action="/message" method="POST">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h3>Send us a message</h3>
+    </div>
+    <div class="modal-body">
+        <p>Send us a message right now and we'll get back to you shortly.</p>
+        <p>Please note: fields marked with an asterisk are required.</p>
+        <div class="form-body">
+            {{ messageform|as_bootstrap }}
+            <div class="form-actions">
+                <button type="submit" id="message-submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

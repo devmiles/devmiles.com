@@ -1,6 +1,7 @@
 $(document).ready(function () {
     // bind submit button click
-    $(":submit").click(submitquote);
+    $("#quote-submit").click(submitquote);
+    $("#message-submit").click(submitmessage);
 	// fix sub nav on scroll
 	var $win = $(window)
 	  , $nav = $('.subnav')
@@ -39,23 +40,49 @@ $(document).ready(function () {
 
 var submitquote = function()
 {
-    $.post('/quote', $(".form-horizontal").serialize(), function(data) {
-        console.log(data)
+    $.post('/quote', $("#quote-form").serialize(), function(data) {
+        //console.log(data)
         if (data.status == 'error') {
             $("#modal-request").html(data.html)
-            $(":submit").click(submitquote)
+            $("#quote-submit").click(submitquote)
         } else if (data.status == 'ok') {
             $(".modal-body").prepend('<div class="alert alert-success">Thanks! We\'ll contact you soon.</div>')
-            $(".form-body, :submit, .modal-footer p, .modal-body p").slideUp('fast', function() {
+            $(".form-body, #quote-submit, .modal-footer p, .modal-body p").slideUp('fast', function() {
                 window.setTimeout(function() {
                     $("#modal-close").click()
                     window.setTimeout(function() {
                         $("#modal-request").html(data.html)
-                        $(":submit").click(submitquote)
+                        $("#quote-submit").click(submitquote)
                     }, 1500)
                 }, 2000)
             })
         }
     });
+    return false
+}
+
+var submitmessage = function()
+{
+    $.post('/message', $("#message-form").serialize(), function(data) {
+        console.log(data);
+        if (data.status == 'error') {
+            $("#message-form-div").html(data.html)
+            $("#message-submit").click(submitmessage)
+        } else if (data.status == 'ok') {
+            //$("#message-form-div .modal-body").prepend('<div class="alert alert-success">Thanks! We\'ll contact you soon.</div>')
+            $("#message-form-div").html(data.html)
+            $("#message-form-div .modal-body").prepend('<div class="alert alert-success">Thanks! We\'ll contact you soon.</div>')
+            $("#message-submit").click(submitmessage);
+            /*$(".form-body, #quote-submit, .modal-footer p, .modal-body p").slideUp('fast', function() {
+                window.setTimeout(function() {
+                    $("#modal-close").click()
+                    window.setTimeout(function() {
+                        $("#modal-request").html(data.html)
+                        $("#quote-submit").click(submitquote)
+                    }, 1500)
+                }, 2000)
+            })*/
+        }
+    })
     return false
 }

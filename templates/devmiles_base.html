@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" type="text/css" media="screen" title="css" charset="utf-8">
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/devmiles.css" type="text/css" media="screen" title="css" charset="utf-8">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/devmiles.css" type="text/css" media="screen" title="css" charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
     {% block extra_head_base %}
         {% block extra_head %}{% endblock %}
@@ -37,7 +37,7 @@
 					<li><a href="#home">Home</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#">Contact Us</a></li>
+					<li><a href="#contacts">Contact Us</a></li>
 					<li class="pull-right" id="quote-link"><a href="#modal-request" data-toggle="modal">Request a Quote</a></li>
 				</ul>
 			</div>
@@ -46,7 +46,7 @@
 			<div class="marketing">
                 <h1>Creating greater business value</h1>
                 {# <p class="marketing-byline">Creating greater business value</p> #}
-                <p><span class="dmlogo">&gt;</span>devmiles' is a small, independent full-service software development company located in Kyiv, Ukraine.
+                <p><span class="dmlogo">&gt;</span>devmiles is a small, independent full-service software development company located in Kyiv, Ukraine.
                     Our goal is to design and develop software solutions to provide greater business value for your organization.
                     We focus on your business needs and choose modern and powerful technologies that fit your specific project.
                     We use agile approach to adapt rapidly and cost efficiently in response to changes in business environments. We involve all of our clients from start to finish so they are just as proud of their software as we are.  </p>
@@ -178,6 +178,27 @@
 			</div>
 		</section>
 	</div>
+    <footer id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <div class="modal-header">
+                        <h3>Contacts</h3>
+                    </div>
+                    <ul class="unstyled">
+                        <li><i class="icon-envelope"></i> Email:<a href="mailto:info@devmiles.com"> info@devmiles.com</a></li>
+                        <li><i class="icon-phone"></i> Skype:<a href="skype:nickivinsky?call"> nickivinsky</a></li>
+                        <li><i class="icon-twitter"></i> Twitter:<a href="https://twitter.com/#!/devmiles_com"> devmiles_com</a></li>
+                        <li><i class="icon-facebook"></i> Facebook:<a href="http://www.facebook.com/devmiles.software"> devmiles.software</a></li>
+                        <li><i class="icon-github"></i> GitHub:<a href="https://github.com/devmiles"> devmiles' github</a></li>
+                    </ul>
+                </div>
+                <div class="span6" id="message-form-div">
+                    {% include "messageform.html" %}
+                </div>
+            </div>
+        </div>
+    </footer>
 	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="{{ STATIC_URL }}js/devmiles.js"></script>
